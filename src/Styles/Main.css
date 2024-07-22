@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: play;
+  src: url('../Fonts/play.ttf');
+  font-weight: none;
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+  background-image: url('../Images/background.webp');
+  font-family: play;
+  object-fit: cover;
+  position: absolute;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
+}
+
+h3 {
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #730303;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:disabled {
+  background-color: #560202;
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  background-color: #730303;
+  font-weight: bold;
+  transform: scale(1.1); /* Zvětšení tlačítka při aktivaci */
+}
+
+.pagination button:hover {
+  background-color: #560202; /* Změna barvy na tmavší při najetí myší */
+}
+
+.conteiner {
+  text-align: justify;
+  font-size: 1rem;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  top: 7rem; /* Posunutí kontejneru výše na stránce */
+  left: 1rem; /* Posunutí kontejneru blíže k levému okraji */
+  width: 50rem; /* Šířka kontejneru na celou šířku s okraji */
+}
+
+.conteiner .container {
+  width: 120rem;
+  background-color: #212020; /* Temnější šedá pro pozadí kontejneru */
+  border: 1px solid #666666; /* Středně šedý obrys kolem kontejneru */
+  border-radius: 8px; /* Zaoblené rohy kontejneru */
+  padding: 15px; /* Vnitřní odsazení kontejneru */
+  margin-bottom: 15px; /* Odsazení mezi jednotlivými kontejnery */
+  overflow-wrap: break-word; /* Zalomení dlouhých slov */
+  color: #FFFFFF; /* Bílá barva textu v kontejneru */
+}
+
+.news-item {
+  font-size: 14px; /* Snížená velikost písma */
+  line-height: 1.5; /* Řádkování textu */
+  margin-bottom: 10px; /* Odsazení mezi jednotlivými položkami v novince */
+}
+
+.text strong {
+  color: #FF5A5A; /* Sytá červená barva pro tučný text */
+}
+
+.text:first-child {
+  margin-top: 0; /* Odstranění horního odsazení prvního odstavce */
+}
+
+.text:last-child {
+  margin-bottom: 0; /* Odstranění dolního odsazení posledního odstavce */
+}
+.text-5 {
+  text-align: center;
+  color: white;
+  margin-top: -6.5rem;
+}
+@media (max-width: 320px) {
+  h3 {
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    color: white;
+  }
+
+  .conteiner {
+    position: absolute;
+    top: 10rem; /* Posunutí kontejneru výše na stránce */
+    left: 1rem; /* Posunutí kontejneru blíže k levému okraji */
+    width: calc(100% - 2rem); /* Šířka kontejneru na celou šířku s okraji */
+  }
+
+  .conteiner .container {
+    background-color: #212020; /* Temnější šedá pro pozadí kontejneru */
+    border: 1px solid #666666; /* Středně šedý obrys kolem kontejneru */
+    border-radius: 8px; /* Zaoblené rohy kontejneru */
+    padding: 15px; /* Vnitřní odsazení kontejneru */
+    margin-bottom: 20px; /* Odsazení mezi jednotlivými kontejnery */
+    overflow-wrap: break-word; /* Zalomení dlouhých slov */
+    color: #FFFFFF; /* Bílá barva textu v kontejneru */
+  }
+
+  .news-item {
+    font-size: 14px; /* Snížená velikost písma */
+    line-height: 1.5; /* Řádkování textu */
+    margin-bottom: 10px; /* Odsazení mezi jednotlivými položkami v novince */
+  }
+
+  .text strong {
+    color: #FF5A5A; /* Sytá červená barva pro tučný text */
+  }
+
+  .text:first-child {
+    margin-top: 0; /* Odstranění horního odsazení prvního odstavce */
+  }
+
+  .text:last-child {
+    margin-bottom: 0; /* Odstranění dolního odsazení posledního odstavce */
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .pagination button {
+    background-color: #560202;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    flex: 1 1 calc(20% - 10px);
+  }
+
+  .pagination button:disabled {
+    background-color: #560202;
+    cursor: not-allowed;
+  }
+
+  .pagination button.active {
+    background-color: #560202;
+    font-weight: bold;
+  }
+
+  .logo {
+    margin-top: -2.5rem;
+    margin-left: 1rem;
+  }
+
+  .text-5 {
+    margin-top: 156.5rem;
+    text-align: center;
+    color: white;
+  }
+
+}
+
+
+@media (min-width: 321px) and (max-width: 1024px)  {
+  h3 {
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    color: white;
+  }
+
+  .conteiner {
+    position: absolute;
+    top: 9rem; /* Posunutí kontejneru výše na stránce */
+    left: 1rem; /* Posunutí kontejneru blíže k levému okraji */
+    width: calc(100% - 2rem); /* Šířka kontejneru na celou šířku s okraji */
+  }
+
+  .conteiner .container {
+    background-color: #212020; /* Temnější šedá pro pozadí kontejneru */
+    border: 1px solid #666666; /* Středně šedý obrys kolem kontejneru */
+    border-radius: 8px; /* Zaoblené rohy kontejneru */
+    padding: 15px; /* Vnitřní odsazení kontejneru */
+    margin-bottom: 0.8srem; /* Odsazení mezi jednotlivými kontejnery */
+    overflow-wrap: break-word; /* Zalomení dlouhých slov */
+    color: #FFFFFF; /* Bílá barva textu v kontejneru */
+  }
+
+  .news-item {
+    font-size: 14px; /* Snížená velikost písma */
+    line-height: 1.5; /* Řádkování textu */
+    margin-bottom: 10px; /* Odsazení mezi jednotlivými položkami v novince */
+  }
+
+  .text strong {
+    color: #FF5A5A; /* Sytá červená barva pro tučný text */
+  }
+
+  .text:first-child {
+    margin-top: 0; /* Odstranění horního odsazení prvního odstavce */
+  }
+
+  .text:last-child {
+    margin-bottom: 0; /* Odstranění dolního odsazení posledního odstavce */
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .pagination button {
+    background-color: #560202;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    flex: 1 1 calc(20% - 10px);
+  }
+
+  .pagination button:disabled {
+    background-color: #560202;
+    cursor: not-allowed;
+  }
+  .logo {
+    margin-top: -2.5rem;
+    margin-left: 3rem;
+  }
+
+  .text-5 {
+    
+    margin-top: 150em;
+    color: white;
+  }
+}

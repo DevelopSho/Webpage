@@ -1,0 +1,119 @@
+* {
+    padding: 0 auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.about-me {
+    text-align: justify;
+    width: 53rem;   
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #212020; /* Temnější šedá pro pozadí kontejneru */
+    border: 1px solid #666666;
+    border-radius: 8px;
+}
+
+.color-h-1 {
+    color: #FF5733; /* Změňte na barvu, kterou chcete použít */
+    text-align: center;
+}
+
+.color-h-2 {
+    color: #FF5733; /* Změňte na barvu, kterou chcete použít */
+    text-align: center;
+}
+
+.color-h-3 {
+    color: #FF5733; /* Změňte na barvu, kterou chcete použít */
+    text-align: center;
+}
+
+.text-1 {
+    color: white;
+}
+.text-2 {
+    color: white;
+}
+.text-3 {
+    color: white;
+}
+
+.posunuti {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 3rem;
+}
+
+.logo {
+    position: absolute;
+    object-fit: contain;
+    top: 2rem;
+    left: 5rem;
+    width: 200px;
+    height: auto;
+  }
+
+  
+.text-4 {
+    margin-top: 0.5rem;
+    text-align: center;
+    color: white;
+  }
+
+/* Responsivita*/
+
+@media (max-width: 320px) {
+    .about-me {
+        position: absolute;
+        top: 11rem;
+        left: 0.8rem;
+        width: calc(95% - 0.5rem);
+        margin: 0 auto;
+    }
+    .text-1 {
+        margin-top: 1.3rem;
+    }
+    .text-2 {
+        margin-top: 3.5rem;
+    }
+    .text-3 {
+        margin-top: 3.5rem;
+    }
+    .color-h-1 {
+        position: absolute;
+        top: 1.5rem;
+    }
+
+    .color-h-2 {
+        position: absolute;
+        top: 65rem;
+    }
+
+    .color-h-3 {
+        position: absolute;
+        top: 84rem;
+    }
+
+    .posunuti{
+        width: 50px;
+        display: inline-block;
+        
+      
+    }
+
+    .text-4 {
+        margin-top: 143rem;
+        text-align: center;
+        color: white;
+    }
+
+    .responsive {
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+        width: 274px ;
+    }
+}
+
