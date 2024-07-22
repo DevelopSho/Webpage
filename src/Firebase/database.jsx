@@ -3,12 +3,12 @@ import 'firebase/firestore';
 
 // Konfigurace Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyAMoHJZ4x_O69IorMH7qx3exGkJY8_hUs8",
-  authDomain: "newsletter---sho.firebaseapp.com",
-  projectId: "newsletter---sho",
-  storageBucket: "newsletter---sho.appspot.com",
-  messagingSenderId: "1038532280834",
-  appId: "1:1038532280834:web:ae9bc5dafd8e94100ddd1b"
+  apiKey: "YOUR API KEY",
+  authDomain: "YOUR AUTH DOMAIN",
+  projectId: "YOUR PROJECT ID",
+  storageBucket: "YOUR STORAGEBUCKET",
+  messagingSenderId: "YOUR messagingSenderId:",
+  appId: "YOUR-APP-ID"
 };
 
 // Inicializace Firebase
