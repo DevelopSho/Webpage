@@ -1,10 +1,11 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { projectFirestore } from '../Firebase/database';
 import { format, isValid } from 'date-fns';
 import Menu from "../Components/Menu";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Styles/Main.css";
-import Ninja from "../Images/Ninja.webp"
+import Ninja from "../Images/Ninja.webp";
+import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
 
 const Newsletter = () => {
   const [data, setData] = useState([]);
@@ -13,27 +14,26 @@ const Newsletter = () => {
   const itemsPerPage = 5;
 
   useEffect(() => {
-    const unsubscribe = projectFirestore
-      .collection("newsletter")
-      .orderBy("dateTitle", "desc")
-      .onSnapshot(
-        (snapshot) => {
-          if (snapshot.empty) {
-            setError(`Žádná novinka není k zobrazení`);
-            setData([]);
-          } else {
-            const result = snapshot.docs.map((doc) => ({
-              id: doc.id,
-              ...doc.data(),
-            }));
-            setData(result);
-            setError("");
-          }
-        },
-        (err) => {
-          setError(err.message);
+    const q = query(collection(projectFirestore, "newsletter"), orderBy("dateTitle", "desc"));
+    const unsubscribe = onSnapshot(
+      q,
+      (snapshot) => {
+        if (snapshot.empty) {
+          setError(`Žádná novinka není k zobrazení`);
+          setData([]);
+        } else {
+          const result = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          setData(result);
+          setError("");
         }
-      );
+      },
+      (err) => {
+        setError(err.message);
+      }
+    );
 
     return () => unsubscribe();
   }, []);
@@ -57,7 +57,7 @@ const Newsletter = () => {
   return (
     <>
       <Menu />
-    <img src={Ninja} alt="logo" className="logo" />
+      <img src={Ninja} alt="logo" className="logo" />
       <div className="conteiner">
         {error && <p>{error}</p>}
         {selectedItems.map((oneLetter) => (
@@ -91,10 +91,9 @@ const Newsletter = () => {
           </button>
         </div>
       </div>
-
-                        <footer>
-                                <p className="text-5">© 2024 Copyright:  JustOnlySho</p>
-                        </footer>
+      <footer>
+        <p className="text-5">© 2024 Copyright: JustOnlySho</p>
+      </footer>
     </>
   );
 };
