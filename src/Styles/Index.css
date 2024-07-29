@@ -15,11 +15,11 @@
 }
 
 .welcome-website {
+  text-align: center !important;
   padding-top: 3rem;
   margin: 0 auto;
-  width: 70%;
+  width: 80%;
   color: rgb(196, 205, 205);
-  text-align: center;
   font-family: play;
   font-size: 1rem;
 }

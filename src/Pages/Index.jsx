@@ -1,6 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { FaInstagram, FaFacebook, FaLinkedin, FaTwitch } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaLinkedin, FaTwitch, FaGithub  } from "react-icons/fa";
 import '../Styles/Index.css'
 
 const Index = () => {
@@ -27,6 +26,10 @@ const Index = () => {
           </a>
           <a href="/" className="social-icon">
             <FaTwitch />
+          </a>
+
+          <a href="/" className="social-icon">
+            <FaGithub />
           </a>
         </div>
       </header>

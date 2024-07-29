@@ -20,25 +20,10 @@
     text-align: center;
 }
 
-.color-h-2 {
-    color: #FF5733; /* Změňte na barvu, kterou chcete použít */
-    text-align: center;
-}
-
-.color-h-3 {
-    color: #FF5733; /* Změňte na barvu, kterou chcete použít */
-    text-align: center;
-}
-
 .text-1 {
     color: white;
 }
-.text-2 {
-    color: white;
-}
-.text-3 {
-    color: white;
-}
+
 
 .posunuti {
 display: flex;
