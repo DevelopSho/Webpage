@@ -24,3 +24,16 @@ p {
     text-align: justify;
     color: white;
 }
+
+.logo-container {
+margin: 0 auto;
+text-align: center;
+}
+
+.FiveM {
+    width: 30%;
+}
+
+.RedM {
+    width: 30%
+}
