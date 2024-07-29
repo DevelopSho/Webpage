@@ -169,7 +169,15 @@ gap: 3rem;
 
     .responsive {
         width: calc(100% - 2rem);
-        height: calc(100% + 1rem); /* Zachová proporce videa */
+        height: 13rem; /* Zachová proporce videa */
+        margin: 0 auto; /* Centruje video */
+    }
+}
+
+@media (min-width: 321px) and (max-width: 1024px) and (orientation: landscape) {
+    .responsive {
+        width: 40em;
+        height: 25em; /* Zachová proporce videa */
         margin: 0 auto; /* Centruje video */
     }
 }
