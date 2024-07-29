@@ -20,8 +20,8 @@ const AboutMe = () => {
                     Krátce o mně. Jmenuji se Martin a bydlím v Jihomoravském kraji, kdy příští rok dovrším 34 let. Jsem vášnivím hráčem MOBA hry League of Legends, FPS hry jménem Valorant, ale mezi mé nejoblíbenější styl her patří Role-Play (zkráceně RP) na platformě FiveM hry Grand Theft Auto V od známé vývojařské společnosti Rockstaru, konkrétně serveru CMRP, jehož odkaz naleznete zde!. Také streamuji občas na platformě Twitch už možná třetím rokem. Jsem též věrným fanouškem Hunger Games, ale také Harryho Pottera, který vyšel přesně v mých 11ti letech. 
                 </p>
                 
-                <h3 className="color-h-1">Moje PC sestava:</h3>
-                <p className="text-1">
+                <h3 className="color-h-2">Moje PC sestava:</h3>
+                <p className="text-2">
                     Case: Asus TUF Gaming GT301 <br />
                     MB: ASRock X670E Steel Legend <br />
                     SSD: Samsung 980 PRO 1TB <br />
@@ -32,8 +32,8 @@ const AboutMe = () => {
                     Zdroj: Seasonic FOCUS GX-650W<br />
                 </p>
 
-                <h3 className="color-h-1">Oblíbená hudba?</h3>
-                <p className="text-1">Jsem člověk, který rád poslouchá hudbu. Možná asi jako každý jiný. Mezi můj oblíbený hudební žánr patří pochopitelně moderní hudba, ale zejména vše, co se točí alespoň okolo rapu a hip-hopu. Nemine jeden den, abych si v autě nepustil nějakou písničku a neužíval si cestu při řízení s hlasitostí podle mamky: 
+                <h3 className="color-h-3">Oblíbená hudba?</h3>
+                <p className="text-3">Jsem člověk, který rád poslouchá hudbu. Možná asi jako každý jiný. Mezi můj oblíbený hudební žánr patří pochopitelně moderní hudba, ale zejména vše, co se točí alespoň okolo rapu a hip-hopu. Nemine jeden den, abych si v autě nepustil nějakou písničku a neužíval si cestu při řízení s hlasitostí podle mamky: 
                     zeslab-to-na-minimum-máš-to-ohulený-na-plný-koule.
                 </p>
                         
