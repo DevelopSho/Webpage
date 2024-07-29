@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.what-rp {
+    text-align: justify;
+    width: 53rem;   
+    height: auto;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #212020; /* Temnější šedá pro pozadí kontejneru */
+    border: 1px solid #666666;
+    border-radius: 8px;
+}
+
+h3 {
+    text-align: center;
+    color: #FF5733 !important;
+}
+
+p {
+    text-align: justify;
+    color: white;
+}
