@@ -32,8 +32,12 @@ text-align: center;
 
 .FiveM {
     width: 30%;
+    object-fit: contain;
+    height: auto; 
 }
 
 .RedM {
-    width: 30%
+    width: 30%;
+    object-fit: contain; 
+    height: auto; 
 }
