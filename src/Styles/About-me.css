@@ -1,6 +1,6 @@
 * {
-    padding: 0 auto;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -59,15 +59,6 @@ gap: 3rem;
     height: auto;
   }
 
-  
-.text-4 {
-    margin-top: 0.5rem;
-    text-align: center;
-    color: white;
-  }
-
-/* Responsivita*/
-
 @media (max-width: 320px) {
     .about-me {
         position: absolute;
@@ -77,39 +68,39 @@ gap: 3rem;
         margin: 0 auto;
     }
     .text-1 {
-        margin-top: 1.3rem;
+        margin-top: -1rem;
     }
     .text-2 {
-        margin-top: 3.5rem;
+        margin-top: 0.5rem;
     }
     .text-3 {
-        margin-top: 3.5rem;
+        margin-top: 0.5rem;
     }
     .color-h-1 {
-        position: absolute;
-        top: 1.5rem;
+        position: relative;
+        top: 0;
+        left: 0%    
     }
 
     .color-h-2 {
-        position: absolute;
-        top: 65rem;
+        position: relative;
+        top: 0.5rem;
+        left: 0%   
     }
 
     .color-h-3 {
-        position: absolute;
-        top: 84rem;
+        position: relative;
+        top: 0;
+        left: 0%     
     }
+
 
     .posunuti{
         width: 50px;
         display: inline-block; 
     }
 
-    .text-4 {
-        margin-top: 143rem;
-        text-align: center;
-        color: white;
-    }
+
 
     .responsive {
         padding-right: 0.5rem;
@@ -171,6 +162,13 @@ gap: 3rem;
         width: calc(100% - 2rem);
         height: 13rem; /* Zachová proporce videa */
         margin: 0 auto; /* Centruje video */
+    }
+
+    .text-4 {
+       position: relative;
+       top: 230cap;
+       left: 0%;
+       color: white;
     }
 }
 

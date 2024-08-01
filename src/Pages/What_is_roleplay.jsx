@@ -1,8 +1,7 @@
 import Menu from "../Components/Menu"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Styles/role-play.css"
-import Ninja from "../Images/Ninja.webp";
-import FiveM from "../Images/FiveM.png"
+import Ninja from "../Images/Ninja2.webp";import FiveM from "../Images/FiveM.png"
 import RedM from "../Images/RedM.png"
 import { Link } from 'react-router-dom'; 
 
@@ -35,10 +34,10 @@ const What_is_roleplay = () => {
              
                 <div className="logo-container">
   <Link to="https://fivem.communityportal.cz/">
-    <img src={FiveM} alt="FiveM logo" className="FiveM" />
+    <img src={FiveM} alt="FiveM logo" className="FiveM" loading="lazy" />
   </Link>
   <Link to="https://redm.communityportal.cz/">
-    <img src={RedM} alt="RedM logo" className="RedM" />
+    <img src={RedM} alt="RedM logo" className="RedM" loading="lazy"/>
   </Link>
 </div>
                 

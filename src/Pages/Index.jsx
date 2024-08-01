@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 import { FaInstagram, FaFacebook, FaLinkedin, FaTwitch, FaGithub  } from "react-icons/fa";
 import '../Styles/Index.css'
 
 const Index = () => {
   return (
     <div className="index-body">
+      <Helmet>
+        <link rel="preload" href="path/to/critical.css" as="style" />
+        <link rel="prefetch" href="path/to/non-critical.js" />
+      </Helmet>
       <header>
         <img
           className="little-change" src="https://lanyard.cnrad.dev/api/558342851897851924?theme=dark&bg&idleMessage=&borderRadius=0px"

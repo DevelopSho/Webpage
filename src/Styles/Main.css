@@ -4,15 +4,14 @@
   box-sizing: border-box;
 }
 @font-face {
-  font-family: play;
-  src: url('../Fonts/play.ttf');
-  font-weight: none;
-  font-style: normal;
-  font-display: block;
+  font-family: 'Play'; /* Název fontu, který použiješ v CSS */
+  src: url('/Fonts/play.woff2') format('woff2'); /* Cesta k tvému fontovému souboru */
+  font-weight: normal; /* Definuj váhu fontu, pokud je to potřeba */
+  font-style: normal;  /* Definuj styl fontu, pokud je to potřeba */
+  font-display: swap; /* Zajistí, že fallback font se použije, dokud se hlavní font nenahraje */
 }
-
 body {
-  background-image: url('../Images/background.webp');
+  background-image: url('../Images/Pozad12.webp');
   font-family: play;
   object-fit: cover;
   position: absolute;
@@ -191,7 +190,6 @@ h3 {
   }
 
 }
-
 
 @media (min-width: 321px) and (max-width: 1024px)  {
   h3 {

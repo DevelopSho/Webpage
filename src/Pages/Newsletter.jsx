@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import { projectFirestore } from '../Firebase/database';
 import { format, isValid } from 'date-fns';
-import Menu from "../Components/Menu";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Styles/Main.css";
-import Ninja from "../Images/Ninja.webp";
+import Ninja from "../Images/Ninja2.webp";
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
+import Menu from "../Components/Menu"
+
+
+
 
 const Newsletter = () => {
   const [data, setData] = useState([]);
@@ -57,7 +60,7 @@ const Newsletter = () => {
   return (
     <>
       <Menu />
-      <img src={Ninja} alt="logo" className="logo" />
+      <img src={Ninja} alt="logo" className="logo" loading="lazy" />
       <div className="conteiner">
         {error && <p>{error}</p>}
         {selectedItems.map((oneLetter) => (
@@ -91,9 +94,6 @@ const Newsletter = () => {
           </button>
         </div>
       </div>
-      <footer>
-        <p className="text-5">© 2024 Copyright: JustOnlySho</p>
-      </footer>
     </>
   );
 };

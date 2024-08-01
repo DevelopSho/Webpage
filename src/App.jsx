@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Index from "./Pages/Index";
 import About_me from "./Pages/About_me";

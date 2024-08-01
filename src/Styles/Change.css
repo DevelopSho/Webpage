@@ -11,11 +11,11 @@
 }
 
 @font-face {
-  font-family: play;
-  src: url('../Fonts/play.ttf');
-  font-weight: none;
-  font-style: normal;
-  font-display: fallback;
+  font-family: 'Play'; /* Název fontu, který použiješ v CSS */
+  src: url('/Fonts/play.woff2') format('woff2'); /* Cesta k tvému fontovému souboru */
+  font-weight: normal; /* Definuj váhu fontu, pokud je to potřeba */
+  font-style: normal;  /* Definuj styl fontu, pokud je to potřeba */
+  font-display: swap; /* Zajistí, že fallback font se použije, dokud se hlavní font nenahraje */
 }
 
 .nav-link {
@@ -87,21 +87,21 @@
 @media (min-width: 321px) and (max-width: 1024px) {
   .navbar-collapse {
     position: absolute;
-    top: calc(0.5rem + 0.5rem); /* Posunuto pod custom-toggle o vhodnou výšku */
-    right: -9rem; /* Upraveno pro umístění vedle custom-toggle */
+    top: calc(0.5rem + 0.5rem);
+    right: -9rem;
     color: white;
     background-color: #1d0101;
     transition: height 0.1s ease;
-    width: 15em; /* Zvětšení šířky pro střední zařízení */
+    width: 15em; 
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Stín pro zvýraznění navbar-collapse */
-    z-index: 1000; /* Z-index pro zobrazení nad ostatním obsahem */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    z-index: 1000; 
     padding: 10px;
   }
 
   .nav-link {
     display: block;
-    padding: 12px; /* Zvětšení odsazení pro lepší ovladatelnost na středních zařízeních */
+    padding: 12px;
     color: rgb(213, 206, 206);
     text-align: center;
     text-decoration: none;
