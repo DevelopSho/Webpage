@@ -2,6 +2,7 @@ import Menu from "../Components/Menu"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Styles/About-me.css';
 import Ninja from "../Images/Ninja2.webp";
+import '../Styles/Logo.css'
 // Dynamický import komponenty Menu
 
 

@@ -6,7 +6,7 @@
 
 .about-me {
     text-align: justify;
-    width: 53rem;   
+    width: 60rem;   
     height: auto;
     margin: 2rem auto;
     padding: 1rem;
@@ -50,14 +50,7 @@ align-items: center;
 gap: 3rem;
 }
 
-.logo {
-    position: absolute;
-    object-fit: contain;
-    top: 2rem;
-    left: 5rem;
-    width: 200px;
-    height: auto;
-  }
+
 
 @media (max-width: 320px) {
     .about-me {
@@ -100,15 +93,13 @@ gap: 3rem;
         display: inline-block; 
     }
 
-
-
     .responsive {
         padding-right: 0.5rem;
         padding-top: 0.5rem;
         width: 274px ;
     }
-}
 
+}
 
 @media (min-width: 321px) and (max-width: 1024px) {
     .about-me {

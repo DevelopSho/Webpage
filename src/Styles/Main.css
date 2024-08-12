@@ -10,6 +10,8 @@
   font-style: normal;  /* Definuj styl fontu, pokud je to potřeba */
   font-display: swap; /* Zajistí, že fallback font se použije, dokud se hlavní font nenahraje */
 }
+
+
 body {
   background-image: url('../Images/Pozad12.webp');
   font-family: play;
@@ -70,7 +72,7 @@ h3 {
   flex-wrap: wrap;
   top: 7rem; /* Posunutí kontejneru výše na stránce */
   left: 1rem; /* Posunutí kontejneru blíže k levému okraji */
-  width: 50rem; /* Šířka kontejneru na celou šířku s okraji */
+  width: 60rem; /* Šířka kontejneru na celou šířku s okraji */
 }
 
 .conteiner .container {
@@ -117,7 +119,7 @@ h3 {
 
   .conteiner {
     position: absolute;
-    top: 10rem; /* Posunutí kontejneru výše na stránce */
+    top: 8rem; /* Posunutí kontejneru výše na stránce */
     left: 1rem; /* Posunutí kontejneru blíže k levému okraji */
     width: calc(100% - 2rem); /* Šířka kontejneru na celou šířku s okraji */
   }
@@ -177,18 +179,6 @@ h3 {
     background-color: #560202;
     font-weight: bold;
   }
-
-  .logo {
-    margin-top: -2.5rem;
-    margin-left: 1rem;
-  }
-
-  .text-5 {
-    margin-top: 156.5rem;
-    text-align: center;
-    color: white;
-  }
-
 }
 
 @media (min-width: 321px) and (max-width: 1024px)  {
@@ -256,14 +246,11 @@ h3 {
     background-color: #560202;
     cursor: not-allowed;
   }
-  .logo {
-    margin-top: -2.5rem;
-    margin-left: 3rem;
-  }
-
+ 
   .text-5 {
-    
     margin-top: 150em;
     color: white;
   }
 }
+
+

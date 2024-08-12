@@ -1,0 +1,58 @@
+/* Main zobrazení */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    position: absolute;
+    top: 0.2rem;
+    left: 3rem;
+    object-fit: contain;
+    width: 130px;
+}
+/*320px normální zobrazení*/
+
+@media (max-width: 320px) {
+    .logo {
+        width: 150px;
+        object-fit: contain;
+        position: absolute;
+        left: 8rem;
+        top: 1.4rem;
+    }
+}
+@media (min-width: 321px) and (max-width: 1024px) {
+    .logo {
+        width: 130px;
+        object-fit: contain;
+        position: absolute;
+        left: 10rem;
+        top: 0rem;
+    }
+}
+
+
+/*568px orientace landscape*/
+
+@media (max-width: 568px) and (orientation: landscape) {
+    .logo {
+        position: absolute;
+        object-fit: contain;
+        left: 50%;
+        top: -0.5rem;
+      
+    }
+}
+
+/*Nad 569 už pro modernější mobilní zařízení*/
+
+@media (max-width: 920px) and  (orientation: landscape) {
+    .logo {
+        position: absolute;
+        object-fit: contain;
+        left: 60%;
+        top: -0.4rem;
+    }
+}

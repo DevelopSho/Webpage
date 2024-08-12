@@ -4,6 +4,7 @@ import "../Styles/role-play.css"
 import Ninja from "../Images/Ninja2.webp";import FiveM from "../Images/FiveM.png"
 import RedM from "../Images/RedM.png"
 import { Link } from 'react-router-dom'; 
+import '../Styles/Logo.css'
 
 const What_is_roleplay = () => {
     return(

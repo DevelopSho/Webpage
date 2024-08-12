@@ -24,7 +24,7 @@ const Menu = () => {
               <Nav.Link href="/About_me" className="nav-link"><PiPersonSimpleRunLight className='custom-icons'/>
               BIO</Nav.Link>
               <Nav.Link href="/Characters" className="nav-link"> <MdOutlinePerson2 className='custom-icons'/>
-              Charaktery postav</Nav.Link>
+            Postavy</Nav.Link>
               <Nav.Link href="/Photogallery" className="nav-link"><TbLibraryPhoto className='custom-icons'/>
               Fotogalerie</Nav.Link>
               <Nav.Link href="/Twitch" className="nav-link"><TbBrandTwitch className='custom-icons'/>

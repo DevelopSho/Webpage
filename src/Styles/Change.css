@@ -5,34 +5,35 @@
 }
 
 .flexbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 0.8rem auto;
 }
 
 @font-face {
-  font-family: 'Play'; /* Název fontu, který použiješ v CSS */
-  src: url('/Fonts/play.woff2') format('woff2'); /* Cesta k tvému fontovému souboru */
-  font-weight: normal; /* Definuj váhu fontu, pokud je to potřeba */
-  font-style: normal;  /* Definuj styl fontu, pokud je to potřeba */
-  font-display: swap; /* Zajistí, že fallback font se použije, dokud se hlavní font nenahraje */
+  font-family: 'Play'; 
+  src: url('/Fonts/play.woff2') format('woff2'); 
+  font-weight: normal; 
+  font-style: normal;  
+  font-display: swap; 
 }
 
 .nav-link {
   font-family: play;
-  color: #FFFFFF; /* Bílá barva v hexadecimálním formátu */
+  color: #FFFFFF; 
   text-transform: uppercase;
-  padding: 12px 20px;
+  margin-top: 1rem;
+  padding: 15px 3px 10px 3px;
   border-radius: 5px;
-  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Přidání přechodových efektů */
-  display: inline-block;
-  text-decoration: none;
-  margin-right: 15px; /* Přidání odsazení mezi položkami */
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; 
+  display: flex;
+  margin-right: 15px; 
 }
 
 .nav-link:hover {
-  color: #cfb3b3; /* Změna barvy textu při najetí myší */
-  background-color: rgb(51, 4, 4); /* Změna barvy pozadí při najetí myší */
+  color: #cfb3b3; 
+  background-color: rgb(51, 4, 4); 
   transform: scale(1.1);
 }
 
@@ -43,21 +44,21 @@
 @media (max-width: 320px) {
   .navbar-collapse {                 
     position: absolute;
-    top: calc(0.5rem + 0.5rem); /* Posunuto pod custom-toggle o vhodnou výšku */
-    right: -7rem; /* Upraveno pro umístění vedle custom-toggle */
+    top: calc(0.5rem + 0.5rem); 
+    right: -8rem; 
     color: white;
     background-color: #1d0101;
     transition: height 0.1s ease;
     width: 200px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Stín pro zvýraznění navbar-collapse */
-    z-index: 1000; /* Z-index pro zobrazení nad ostatním obsahem */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    z-index: 1000; 
     padding: 10px;
   }
   .custom-toggle {
     position: absolute;
     top: 4rem;
-    right: 6rem; /* Posunuto blíže k levému okraji */
+    right: 5rem; 
     background-color: white;
     padding: 5px;
   }
@@ -77,25 +78,111 @@
   }
 
   .nav-link:hover {
-    color: #cfb3b3; /* Změna barvy textu při najetí myší */
-    background-color: rgb(51, 4, 4); /* Změna barvy pozadí při najetí myší */
+    color: #cfb3b3; 
+    background-color: rgb(51, 4, 4); 
     transform: scale(1.1);
-    margin-left: 1rem; /* Zvětšení textu při najetí myší */
+    margin-left: 1rem; 
   }
+}
+@media (max-width: 320px) and (orientation: landscape)  {
+  .navbar-collapse {                 
+    position: absolute;
+    right: -3rem; 
+    color: white;
+    background-color: #1d0101;
+    transition: height 0.1s ease;
+    width: 100px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    z-index: 1000; 
+    padding: 10px;
+  }
+  .custom-toggle {
+    position: absolute;
+    top: 4rem;
+    right: 5rem; 
+    background-color: white;
+    padding: 5px;
+  }
+  .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: rgb(213, 206, 206);
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .custom-icons{
+    font-size: 1.5rem;
+    gap: 0.5rem;
+  }
+  
+  .nav-link:hover {
+    color: #cfb3b3; 
+    background-color: rgb(51, 4, 4); 
+    transform: scale(1.1);
+    margin-left: 1rem; 
+}
 }
 
 @media (min-width: 321px) and (max-width: 1024px) {
   .navbar-collapse {
     position: absolute;
     top: calc(0.5rem + 0.5rem);
-    right: -9rem;
+    left: -3rem;
     color: white;
     background-color: #1d0101;
     transition: height 0.1s ease;
-    width: 15em; 
+    width: 14em; 
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
     z-index: 1000; 
+    padding: 10px;
+  }
+
+  .nav-link {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    color: rgb(213, 206, 206);
+    text-align: center;
+    text-decoration: none;
+  }
+  .custom-toggle {
+    position: absolute;
+    top: 4rem;
+    right: calc(4rem + 1.5rem);
+    background-color: white;
+    padding: 5px;
+  }
+  
+  .custom-icons {
+    font-size: 1.8rem; 
+    gap: 0.8rem; 
+  }
+
+  .nav-link:hover {
+    color: #cfb3b3; 
+    background-color: rgb(51, 4, 4); 
+    transform: scale(1.1);
+    margin-left: 1rem; 
+  }
+}
+
+@media (orientation: landscape) and (min-width: 321px) and (max-width: 1024px) {
+  .navbar-collapse {
+    position: absolute;
+    top: calc(0.4rem + 0.4rem); 
+    right: 2rem; 
+    color: white;
+    background-color: #1d0101;
+    transition: height 0.1s ease;
+    width: 260px; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    z-index: 1000;
     padding: 10px;
   }
 
@@ -109,57 +196,14 @@
   .custom-toggle {
     position: absolute;
     top: 4rem;
-    right: calc(6rem + 1.5rem); /* Posunuto blíže k levému okraji */
+    right: calc(10.5rem + 1.5rem); 
     background-color: white;
     padding: 5px;
   }
   
   .custom-icons {
-    font-size: 1.8rem; /* Zvětšení velikosti ikon pro střední zařízení */
-    gap: 0.8rem; /* Zvětšení mezery mezi ikonami */
-  }
-
-  .nav-link:hover {
-    color: #cfb3b3; /* Změna barvy textu při najetí myší */
-    background-color: rgb(51, 4, 4); /* Změna barvy pozadí při najetí myší */
-    transform: scale(1.1);
-    margin-left: 1rem; /* Zvětšení textu při najetí myší */
-  }
-}
-
-@media (orientation: landscape) and (min-width: 321px) and (max-width: 1024px) {
-  .navbar-collapse {
-    position: absolute;
-    top: calc(0.4rem + 0.4rem); /* Posunuto pod custom-toggle o vhodnou výšku */
-    right: 2rem; /* Upraveno pro umístění vedle custom-toggle */
-    color: white;
-    background-color: #1d0101;
-    transition: height 0.1s ease;
-    width: 260px; /* Zvětšení šířky pro střední zařízení */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Stín pro zvýraznění navbar-collapse */
-    z-index: 1000; /* Z-index pro zobrazení nad ostatním obsahem */
-    padding: 10px;
-  }
-
-  .nav-link {
-    display: block;
-    padding: 12px; /* Zvětšení odsazení pro lepší ovladatelnost na středních zařízeních */
-    color: rgb(213, 206, 206);
-    text-align: center;
-    text-decoration: none;
-  }
-  .custom-toggle {
-    position: absolute;
-    top: 1rem;
-    right: calc(18.5rem + 1.5rem); /* Posunuto blíže k levému okraji */
-    background-color: white;
-    padding: 5px;
-  }
-  
-  .custom-icons {
-    font-size: 1.8rem; /* Zvětšení velikosti ikon pro střední zařízení */
-    gap: 0.8rem; /* Zvětšení mezery mezi ikonami */
+    font-size: 1.8rem; 
+    gap: 0.8rem; 
   }
 }
 

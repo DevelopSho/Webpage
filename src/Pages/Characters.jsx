@@ -1,7 +1,7 @@
 import Menu from "../Components/Menu"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Ninja from "../Images/Ninja2.webp";
-
+import '../Styles/Logo.css'
 const Characters = () => {
     return(
         <>

@@ -6,9 +6,7 @@ import "../Styles/Main.css";
 import Ninja from "../Images/Ninja2.webp";
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
 import Menu from "../Components/Menu"
-
-
-
+import '../Styles/Logo.css'
 
 const Newsletter = () => {
   const [data, setData] = useState([]);
@@ -92,6 +90,10 @@ const Newsletter = () => {
           >
             Další
           </button>
+
+           <footer>
+            <p className="footer-style">©Copyright 2024 by JustOnlySho</p> 
+           </footer>
         </div>
       </div>
     </>
