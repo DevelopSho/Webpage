@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { projectFirestore } from '../Firebase/database';
 import { format, isValid } from 'date-fns';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "../Styles/Main.css";
+import "../Styles/Newsletter.css";
 import Ninja from "../Images/Ninja2.webp";
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
 import Menu from "../Components/Menu"
@@ -91,11 +91,12 @@ const Newsletter = () => {
             Další
           </button>
 
-           <footer>
-            <p className="footer-style">©Copyright 2024 by JustOnlySho</p> 
-           </footer>
+        
         </div>
       </div>
+      <footer>
+            <p className="footer-style">©Copyright 2024 by JustOnlySho</p> 
+      </footer>
     </>
   );
 };

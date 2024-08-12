@@ -103,10 +103,12 @@ h3 {
 .text:last-child {
   margin-bottom: 0; /* Odstranění dolního odsazení posledního odstavce */
 }
-.text-5 {
-  text-align: center;
+
+.footer-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
-  margin-top: -6.5rem;
 }
 
 @media (max-width: 320px) {
@@ -179,6 +181,13 @@ h3 {
     background-color: #560202;
     font-weight: bold;
   }
+
+  .footer-style {
+    position: absolute;
+    top: 172em;
+    left: 45px;
+    color: white;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 1024px)  {
@@ -247,10 +256,21 @@ h3 {
     cursor: not-allowed;
   }
  
-  .text-5 {
-    margin-top: 150em;
+  .footer-style {
+    position: absolute;
+    top: 155em;
+    left: 72px;
     color: white;
   }
 }
 
+@media (max-width: 568px) and (orientation: landscape) {
 
+.footer-style {
+    position: absolute;
+    top: 128em;
+    left: 170px;
+    color: white;
+  }
+ 
+}
