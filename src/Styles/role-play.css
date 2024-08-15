@@ -1,12 +1,14 @@
+/* Reset a box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
+/* Styling pro kontejner textu */
 .what-rp {
     text-align: justify;
-    width: 53rem;   
+    width: 60rem;   
     height: auto;
     margin: 2rem auto;
     padding: 1rem;
@@ -16,16 +18,19 @@
     color: white;
 }
 
+/* Nadpisy */
 h3 {
     text-align: center;
-    color: #FF5733 !important;
+    color: #FF5733 !important; /* Oranžová barva nadpisů */
 }
 
+/* Kontejner pro logo */
 .logo-container {
-margin: 0 auto;
-text-align: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
+/* Styling pro obrázky FiveM a RedM */
 .FiveM {
     width: 30%;
     object-fit: contain;
@@ -36,4 +41,108 @@ text-align: center;
     width: 30%;
     object-fit: contain; 
     height: auto; 
+}
+
+/* Stylování patičky */
+footer {
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    margin-top: auto; /* Umístí footer na spodní část stránky */
+}
+
+
+/* Mobilní zařízení */
+@media (max-width: 768px) {
+    .what-rp {
+        position: absolute;
+        top: 10rem;
+        left: 0.5rem;
+        width: 90%; /* Zmenšení šířky kontejneru na 90% pro mobilní zařízení */
+        padding: 1rem; /* Zachování vnitřního odsazení */
+    }
+
+    .FiveM, .RedM {
+        width: 50%; /* Zvětšení šířky obrázků na 80% pro lepší zobrazení na menších obrazovkách */
+        margin-bottom: 1rem; /* Přidání mezery mezi obrázky */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Zmenšení velikosti fontu nadpisů na mobilních zařízeních */
+    }
+
+    footer {
+        padding: 0.8rem;
+        font-size: 0.9rem; /* Zmenšení textu v patičce na mobilních zařízeních */
+    }
+}
+
+/* Malé mobilní zařízení (telefony s šířkou obrazovky menší než 480px) */
+@media (max-width: 480px) {
+    .what-rp {
+        width: 95%; /* Zmenšení šířky kontejneru na 95% pro velmi malé mobilní zařízení */
+        padding: 0.8rem; /* Mírné zmenšení vnitřního odsazení */
+    }
+
+    .FiveM, .RedM {
+        width: 50%; /* Obrázky budou mít plnou šířku kontejneru */
+        margin-bottom: 1rem; /* Přidání mezery mezi obrázky */
+    }
+
+    h3 {
+        font-size: 1.2rem; /* Další zmenšení fontu nadpisů pro malé mobilní zařízení */
+    }
+
+    footer {
+        padding: 0.7rem;
+        font-size: 0.8rem; /* Další zmenšení textu v patičce na velmi malých mobilních zařízeních */
+    }
+}
+
+/* Landscape orientace pro mobilní zařízení */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .what-rp {
+        position: absolute;
+        top: 10rem;
+        left: 2.5rem;
+        width: 90%; /* Šířka kontejneru pro landscape orientaci */
+        padding: 1rem; /* Zachování vnitřního odsazení */
+    }
+
+    .FiveM, .RedM {
+        width: 30%; /* Zmenšení šířky obrázků na 30% pro lepší zobrazení na landscape orientaci */
+        margin-bottom: 1rem; /* Přidání mezery mezi obrázky */
+    }
+
+    h3 {
+        font-size: 1.4rem; /* Mírné zmenšení velikosti fontu nadpisů pro landscape orientaci */
+    }
+
+    footer {
+        padding: 0.8rem;
+        font-size: 0.9rem; /* Zmenšení textu v patičce pro landscape orientaci na středně velkých zařízeních */
+    }
+}
+
+/* Landscape orientace pro velmi malé mobilní zařízení (telefony s šířkou obrazovky menší než 480px) */
+@media (max-width: 480px) and (orientation: landscape) {
+    .what-rp {
+        width: 95%; /* Šířka kontejneru pro landscape orientaci */
+        padding: 0.8rem; /* Mírné zmenšení vnitřního odsazení */
+    }
+
+    .FiveM, .RedM {
+        width: 90%; /* Zmenšení šířky obrázků na 90% pro lepší zobrazení na landscape orientaci */
+        margin-bottom: 1rem; /* Přidání mezery mezi obrázky */
+    }
+
+    h3 {
+        font-size: 1.3rem; /* Mírné zmenšení velikosti fontu nadpisů pro landscape orientaci */
+    }
+
+    footer {
+        padding: 0.7rem;
+        font-size: 0.8rem; /* Další zmenšení textu v patičce na velmi malých zařízeních v landscape orientaci */
+    }
 }

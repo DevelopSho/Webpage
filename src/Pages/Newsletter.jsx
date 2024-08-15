@@ -6,7 +6,7 @@ import "../Styles/Newsletter.css";
 import Ninja from "../Images/Ninja2.webp";
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
 import Menu from "../Components/Menu"
-import '../Styles/Logo.css'
+import '../Styles/Logo.css';
 
 const Newsletter = () => {
   const [data, setData] = useState([]);
@@ -20,7 +20,7 @@ const Newsletter = () => {
       q,
       (snapshot) => {
         if (snapshot.empty) {
-          setError(`Žádná novinka není k zobrazení`);
+          setError("Žádná novinka není k zobrazení");
           setData([]);
         } else {
           const result = snapshot.docs.map((doc) => ({
@@ -75,27 +75,16 @@ const Newsletter = () => {
           >
             Předchozí
           </button>
-          {Array.from({ length: totalPages }, (_, index) => (
-            <button
-              key={index}
-              onClick={() => handlePageChange(index + 1)}
-              className={currentPage === index + 1 ? "active" : ""}
-            >
-              {index + 1}
-            </button>
-          ))}
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
           >
             Další
           </button>
-
-        
         </div>
       </div>
       <footer>
-            <p className="footer-style">©Copyright 2024 by JustOnlySho</p> 
+        <p className="footer-style">©Copyright 2024 by JustOnlySho</p>
       </footer>
     </>
   );

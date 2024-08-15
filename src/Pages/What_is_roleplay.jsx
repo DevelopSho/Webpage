@@ -41,10 +41,11 @@ const What_is_roleplay = () => {
     <img src={RedM} alt="RedM logo" className="RedM" loading="lazy"/>
   </Link>
 </div>
-                
-            </div> 
-            <footer>
-            </footer>
+        </div> 
+        
+      <footer>
+        <p className="footer-style">©Copyright 2024 by JustOnlySho</p>
+      </footer>
         </>
     )
 }

@@ -10,6 +10,7 @@ import { TbLibraryPhoto } from "react-icons/tb";
 import { MdOutlinePerson2 } from "react-icons/md";
 import { PiPersonSimpleRunLight } from "react-icons/pi";
 import { PiNewspaperLight } from "react-icons/pi";
+import { CiStickyNote } from "react-icons/ci";
 
 
 const Menu = () => {
@@ -30,6 +31,7 @@ const Menu = () => {
               <Nav.Link href="/Twitch" className="nav-link"><TbBrandTwitch className='custom-icons'/>
               Twitch</Nav.Link>
               <Nav.Link href="/What_is_roleplay" className="nav-link">   <PiGameControllerDuotone className='custom-icons'/>Co je to RP?</Nav.Link>
+              <Nav.Link href="#" className="nav-link">   <CiStickyNote className='custom-icons'/>Příběhy</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

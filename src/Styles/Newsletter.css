@@ -3,41 +3,36 @@
   padding: 0;
   box-sizing: border-box;
 }
-@font-face {
-  font-family: 'Play'; /* Název fontu, který použiješ v CSS */
-  src: url('/Fonts/play.woff2') format('woff2'); /* Cesta k tvému fontovému souboru */
-  font-weight: normal; /* Definuj váhu fontu, pokud je to potřeba */
-  font-style: normal;  /* Definuj styl fontu, pokud je to potřeba */
-  font-display: swap; /* Zajistí, že fallback font se použije, dokud se hlavní font nenahraje */
-}
 
+@font-face {
+  font-family: 'Play';
+  src: url('/Fonts/play.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
   background-image: url('../Images/Pozad12.webp');
   font-family: play;
-  object-fit: cover;
-  position: absolute;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-height: 100%;
-}
-
-h3 {
-  color: white;
+  min-height: 100vh; /* Nastavení minimální výšky na 100% viewport height */
+  display: flex;
+  flex-direction: column; /* Flexbox pro umístění footeru na konec */
 }
 
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 .pagination button {
-  background-color: #730303;
+  background-color: #500707;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -55,11 +50,11 @@ h3 {
 .pagination button.active {
   background-color: #730303;
   font-weight: bold;
-  transform: scale(1.1); /* Zvětšení tlačítka při aktivaci */
+  transform: scale(1.1);
 }
 
 .pagination button:hover {
-  background-color: #560202; /* Změna barvy na tmavší při najetí myší */
+  background-color: #560202;
 }
 
 .conteiner {
@@ -70,38 +65,25 @@ h3 {
   align-items: center;
   margin: 2rem auto;
   flex-wrap: wrap;
-  top: 7rem; /* Posunutí kontejneru výše na stránce */
-  left: 1rem; /* Posunutí kontejneru blíže k levému okraji */
-  width: 60rem; /* Šířka kontejneru na celou šířku s okraji */
-}
-
-.conteiner .container {
-  width: 120rem;
-  background-color: #212020; /* Temnější šedá pro pozadí kontejneru */
-  border: 1px solid #666666; /* Středně šedý obrys kolem kontejneru */
-  border-radius: 8px; /* Zaoblené rohy kontejneru */
-  padding: 15px; /* Vnitřní odsazení kontejneru */
-  margin-bottom: 15px; /* Odsazení mezi jednotlivými kontejnery */
-  overflow-wrap: break-word; /* Zalomení dlouhých slov */
-  color: #FFFFFF; /* Bílá barva textu v kontejneru */
-}
-
-.news-item {
-  font-size: 14px; /* Snížená velikost písma */
-  line-height: 1.5; /* Řádkování textu */
-  margin-bottom: 10px; /* Odsazení mezi jednotlivými položkami v novince */
+  top: 7rem;
+  left: 1rem;
+  width: 60rem;
+  flex: 1; /* Flex-grow pro roztažení hlavního obsahu */
 }
 
 .text strong {
   color: #FF5A5A; /* Sytá červená barva pro tučný text */
 }
 
-.text:first-child {
-  margin-top: 0; /* Odstranění horního odsazení prvního odstavce */
-}
-
-.text:last-child {
-  margin-bottom: 0; /* Odstranění dolního odsazení posledního odstavce */
+.conteiner .container {
+  width: 120rem;
+  background-color: #212020;
+  border: 1px solid #666666;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  overflow-wrap: break-word;
+  color: #FFFFFF;
 }
 
 .footer-style {
@@ -109,168 +91,49 @@ h3 {
   justify-content: center;
   align-items: center;
   color: white;
+  padding: 1rem;
+  width: 100%;
+  margin-top: auto; /* Umístí footer na spodní část stránky */
 }
 
 @media (max-width: 320px) {
-  h3 {
-    position: absolute;
-    top: 4rem;
-    left: 1rem;
-    color: white;
-  }
-
   .conteiner {
-    position: absolute;
-    top: 8rem; /* Posunutí kontejneru výše na stránce */
-    left: 1rem; /* Posunutí kontejneru blíže k levému okraji */
-    width: calc(100% - 2rem); /* Šířka kontejneru na celou šířku s okraji */
+    width: calc(100% - 2rem);
+    margin-top: 8rem;
   }
 
   .conteiner .container {
-    background-color: #212020; /* Temnější šedá pro pozadí kontejneru */
-    border: 1px solid #666666; /* Středně šedý obrys kolem kontejneru */
-    border-radius: 8px; /* Zaoblené rohy kontejneru */
-    padding: 15px; /* Vnitřní odsazení kontejneru */
-    margin-bottom: 20px; /* Odsazení mezi jednotlivými kontejnery */
-    overflow-wrap: break-word; /* Zalomení dlouhých slov */
-    color: #FFFFFF; /* Bílá barva textu v kontejneru */
-  }
-
-  .news-item {
-    font-size: 14px; /* Snížená velikost písma */
-    line-height: 1.5; /* Řádkování textu */
-    margin-bottom: 10px; /* Odsazení mezi jednotlivými položkami v novince */
-  }
-
-  .text strong {
-    color: #FF5A5A; /* Sytá červená barva pro tučný text */
-  }
-
-  .text:first-child {
-    margin-top: 0; /* Odstranění horního odsazení prvního odstavce */
-  }
-
-  .text:last-child {
-    margin-bottom: 0; /* Odstranění dolního odsazení posledního odstavce */
-  }
-
-  .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
-  }
-
-  .pagination button {
-    background-color: #560202;
-    border: none;
-    color: white;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    flex: 1 1 calc(20% - 10px);
-  }
-
-  .pagination button:disabled {
-    background-color: #560202;
-    cursor: not-allowed;
-  }
-
-  .pagination button.active {
-    background-color: #560202;
-    font-weight: bold;
+    margin-bottom: 10px;
   }
 
   .footer-style {
-    position: absolute;
-    top: 172em;
-    left: 45px;
-    color: white;
+    padding: 1rem;
   }
 }
 
-@media (min-width: 321px) and (max-width: 1024px)  {
-  h3 {
-    position: absolute;
-    top: 4rem;
-    left: 1rem;
-    color: white;
-  }
-
+@media (min-width: 321px) and (max-width: 1024px) {
   .conteiner {
-    position: absolute;
-    top: 9rem; /* Posunutí kontejneru výše na stránce */
-    left: 1rem; /* Posunutí kontejneru blíže k levému okraji */
-    width: calc(100% - 2rem); /* Šířka kontejneru na celou šířku s okraji */
+    width: calc(100% - 2rem);
+    margin-top: 9rem;
   }
 
   .conteiner .container {
-    background-color: #212020; /* Temnější šedá pro pozadí kontejneru */
-    border: 1px solid #666666; /* Středně šedý obrys kolem kontejneru */
-    border-radius: 8px; /* Zaoblené rohy kontejneru */
-    padding: 15px; /* Vnitřní odsazení kontejneru */
-    margin-bottom: 0.8srem; /* Odsazení mezi jednotlivými kontejnery */
-    overflow-wrap: break-word; /* Zalomení dlouhých slov */
-    color: #FFFFFF; /* Bílá barva textu v kontejneru */
+    margin-bottom: 0.8rem;
   }
 
-  .news-item {
-    font-size: 14px; /* Snížená velikost písma */
-    line-height: 1.5; /* Řádkování textu */
-    margin-bottom: 10px; /* Odsazení mezi jednotlivými položkami v novince */
-  }
-
-  .text strong {
-    color: #FF5A5A; /* Sytá červená barva pro tučný text */
-  }
-
-  .text:first-child {
-    margin-top: 0; /* Odstranění horního odsazení prvního odstavce */
-  }
-
-  .text:last-child {
-    margin-bottom: 0; /* Odstranění dolního odsazení posledního odstavce */
-  }
-
-  .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
-  }
-
-  .pagination button {
-    background-color: #560202;
-    border: none;
-    color: white;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    flex: 1 1 calc(20% - 10px);
-  }
-
-  .pagination button:disabled {
-    background-color: #560202;
-    cursor: not-allowed;
-  }
- 
   .footer-style {
-    position: absolute;
-    top: 155em;
-    left: 72px;
-    color: white;
+    padding: 1rem;
   }
 }
 
 @media (max-width: 568px) and (orientation: landscape) {
-
-.footer-style {
-    position: absolute;
-    top: 128em;
-    left: 170px;
-    color: white;
+  .footer-style {
+    padding: 1rem;
   }
- 
+}
+
+@media (min-width: 569px) and (max-width: 920px) and (orientation: landscape) {
+  .footer-style {
+    padding: 1rem;
+  }
 }
