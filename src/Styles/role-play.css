@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+/* Kontejner pro celé tělo stránky */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Zajistí, že tělo stránky vyplní minimální výšku viewportu */
+}
+
 /* Styling pro kontejner textu */
 .what-rp {
     text-align: justify;
@@ -49,22 +56,20 @@ footer {
     text-align: center;
     padding: 1rem;
     width: 100%;
-    margin-top: auto; /* Umístí footer na spodní část stránky */
 }
-
 
 /* Mobilní zařízení */
 @media (max-width: 768px) {
     .what-rp {
-        position: absolute;
-        top: 10rem;
-        left: 0.5rem;
+        position: relative; /* Změna na relative pro lepší responsivitu */
+        top: 10rem; /* Nastavení na 0, aby se přizpůsobil kontextu */
+        left: 0;
         width: 90%; /* Zmenšení šířky kontejneru na 90% pro mobilní zařízení */
         padding: 1rem; /* Zachování vnitřního odsazení */
     }
 
     .FiveM, .RedM {
-        width: 50%; /* Zvětšení šířky obrázků na 80% pro lepší zobrazení na menších obrazovkách */
+        width: 50%; /* Zvětšení šířky obrázků na 50% pro lepší zobrazení na menších obrazovkách */
         margin-bottom: 1rem; /* Přidání mezery mezi obrázky */
     }
 
@@ -75,6 +80,7 @@ footer {
     footer {
         padding: 0.8rem;
         font-size: 0.9rem; /* Zmenšení textu v patičce na mobilních zařízeních */
+        margin-top: 10rem;
     }
 }
 
@@ -103,8 +109,8 @@ footer {
 /* Landscape orientace pro mobilní zařízení */
 @media (max-width: 1024px) and (orientation: landscape) {
     .what-rp {
-        position: absolute;
-        top: 10rem;
+        position: relative; /* Změna na relative pro lepší responsivitu */
+        top: 0;
         left: 2.5rem;
         width: 90%; /* Šířka kontejneru pro landscape orientaci */
         padding: 1rem; /* Zachování vnitřního odsazení */

@@ -108,6 +108,7 @@ body {
 
   .footer-style {
     padding: 1rem;
+    margin-top: -12rem;
   }
 }
 
@@ -122,12 +123,14 @@ body {
   }
 
   .footer-style {
+    margin-top: -12rem;
     padding: 1rem;
   }
 }
 
 @media (max-width: 568px) and (orientation: landscape) {
   .footer-style {
+  
     padding: 1rem;
   }
 }
@@ -135,5 +138,6 @@ body {
 @media (min-width: 569px) and (max-width: 920px) and (orientation: landscape) {
   .footer-style {
     padding: 1rem;
+    margin-top: -3rem;
   }
 }

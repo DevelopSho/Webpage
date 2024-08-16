@@ -1,0 +1,100 @@
+.button-characters {
+    background-color: #560202;
+    border: 0px solid #560202;
+}
+
+.button-characters:hover {
+    background-color: #560202;
+}
+
+.characters-page {
+    width: 65rem;
+    margin: 0 auto;   
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; 
+    margin: 0 auto;
+}
+
+.character-card {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #666666;
+    background-color: #212020; /* Poloprůhledné pozadí pro lepší čitelnost */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.character-card:hover {
+    transform: scale(1.03);
+}
+
+.change-color-font {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+/* Mobilní zařízení */
+@media (max-width: 1024px) {
+    .characters-page {
+        position: relative;
+        top: 8rem;
+        left: 0;
+        width: 100%; /* Šířka kontejneru pro mobilní zařízení */
+        padding: 1rem; /* Padding pro lepší vzhled na menších obrazovkách */
+    }
+
+    .card-container {
+        flex-direction: column; /* Změna orientace karet na sloupec */
+        align-items: center; /* Centrum karet */
+    }
+
+    .character-card {
+        width: 90%; /* Šířka karty pro mobilní zařízení */
+        margin-bottom: 1rem; /* Mezery mezi kartami */
+    }
+}
+
+/* Landscape orientace pro mobilní zařízení */
+@media (max-width: 768px) and (orientation: landscape) {
+    .characters-page {
+        width: 100%; /* Šířka kontejneru pro landscape orientaci */
+        padding: 1rem; /* Padding pro lepší vzhled na landscape */
+    }
+
+    .card-container {
+        flex-direction: row; /* Rozložení karet do řádku v landscape */
+        justify-content: space-between; /* Rovnoměrné rozložení karet */
+    }
+
+    .character-card {
+        width: 80%; /* Šířka karty pro landscape orientaci */
+        margin-bottom: 1rem; /* Mezery mezi kartami */
+    }
+}
+
+/* Landscape orientace pro velmi malé mobilní zařízení (telefony s šířkou obrazovky menší než 480px) */
+@media (max-width: 480px) and (orientation: landscape) {
+    .characters-page {
+        width: 100%; /* Šířka kontejneru na 100% pro velmi malé zařízení */
+        padding: 0.8rem; /* Mírné zmenšení paddingu */
+    }
+
+    .card-container {
+        flex-direction: row; /* Rozložení karet do řádku v landscape */
+        justify-content: space-around; /* Rovnoměrné rozložení karet */
+    }
+
+    .character-card {
+        width: 48%; /* Šířka karty pro landscape orientaci */
+        margin-bottom: 0.5rem; /* Mírné mezery mezi kartami */
+    }
+}

@@ -29,11 +29,11 @@ const Index = () => {
           >
             <FaLinkedin />
           </a>
-          <a href="/" className="social-icon">
+          <a href="https://www.twitch.tv/justonlysho" className="social-icon">
             <FaTwitch />
           </a>
 
-          <a href="/" className="social-icon">
+          <a href="https://github.com/DevelopSho" className="social-icon">
             <FaGithub />
           </a>
         </div>
