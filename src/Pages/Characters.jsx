@@ -37,6 +37,7 @@ const Characters = () => {
 
     return (
         <>
+      
             <Menu />
             <img src={Ninja} alt="logo" className="logo" loading="lazy" />
             <div className="characters-page">
@@ -62,6 +63,7 @@ const Characters = () => {
                     </Row>
                 </Container>
             </div>
+           
         </>
     );
 }

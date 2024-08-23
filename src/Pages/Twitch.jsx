@@ -5,10 +5,12 @@ import '../Styles/Logo.css';
 const Twitch = () => {
     return(
         <>
+        
         <Menu />
         <img src={Ninja} alt="logo" className="logo" loading="lazy" />
 
         <h1>Commin soon</h1>
+     
         </>
     )
 }

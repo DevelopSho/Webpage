@@ -46,6 +46,7 @@ const What_is_roleplay = () => {
       <footer>
         <p className="footer-style">©Copyright 2024 by JustOnlySho</p>
       </footer>
+     
         </>
     )
 }

@@ -6,22 +6,26 @@
 
 .index-body {
   background-color: #1A1C1F;
-  position: absolute;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  min-height: 100%;
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1; /* Zajistí, že bude v popředí */
 }
 
 .welcome-website {
-  text-align: center !important;
+  text-align: center;
   padding-top: 3rem;
   margin: 0 auto;
   width: 70%;
   color: rgb(196, 205, 205);
-  font-family: play;
-  font-size: 1rem;
+  font-family: play, sans-serif;
+  font-size: 4.5rem;
+  background-color: rgba(26, 28, 31, 0.95); /* Poloprůhledné pozadí pro text */
+  padding: 1rem;
+  border-radius: 10px; /* Přidá zaoblené rohy */
 }
 
 .change_link {
@@ -41,6 +45,9 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  background-color: rgba(26, 28, 31, 0.95); /* Poloprůhledné pozadí pro ikony */
+  padding: 0.5rem;
+  border-radius: 10px; /* Přidá zaoblené rohy */
 }
 
 .social-icon {
@@ -58,49 +65,110 @@ a:hover {
   text-decoration: none;
 }
 
-
-@media (max-width:320px) {
-  .little-change {
-    margin-top: 0.1rem;
-    width: 20rem;
-    height: 180px;
-  }
-
-
-  .social-icons-container{
-    position: absolute;
-    top: 11rem;
-    right: 2rem;
-  }
-}
-
-@media (min-width: 321px) and (max-width: 1020px) {
-  .little-change{
-    margin-top: 0.1rem;
-    width: 25rem;
-    height: 180px;
+/* Média dotazy pro mobilní zařízení a tablety v portrait módu */
+@media (max-width: 767px) {
+  .welcome-website {
+    width: 90%;
+    padding-top: 2rem;
+    font-size: 1rem;
   }
 
   .social-icons-container {
-   display: flex;
-   position: relative;
-   justify-content: center;
-   align-items: center;
-   margin: 0 auto;
+    position: relative;
+    top: 10px;
+    right: 10px;
+    justify-content: center;
+  }
+  
+  .social-icon {
+    font-size: 20px;
+    margin: 0 0.5rem;
   }
 }
 
-@media (min-width: 321px) and (max-width: 1020px) and (orientation: landscape) {
-  .little-change{
-    margin-top: 0.1rem;
-    width: 22rem;
-    height: 180px;
+/* Média dotazy pro tablety v portrait módu */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .welcome-website {
+    width: 80%;
+    padding-top: 2.5rem;
+    font-size: 1rem;
   }
 
-  .social-icons-container{
+  .social-icons-container {
+    position: relative;
+    top: 15px;
+    right: 15px;
+    justify-content: center;
+  }
+  
+  .social-icon {
+    font-size: 22px;
+    margin: 0 0.6rem;
+  }
+}
+
+/* Média dotazy pro desktop a větší obrazovky */
+@media (min-width: 1025px) {
+  .welcome-website {
+    width: 70%;
+    padding-top: 3rem;
+    font-size: 1.2rem;
+  }
+
+  .social-icons-container {
     position: absolute;
-    width: 5rem;
-    top: 1rem;
-    right: 6rem;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    margin: 0 0.8rem;
+  }
+}
+
+/* Média dotazy pro landscape orientaci na mobilních zařízeních */
+@media (max-width: 767px) and (orientation: landscape) {
+  .welcome-website {
+    width: 90%;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .social-icons-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    justify-content: flex-end;
+  }
+
+  .social-icon {
+    font-size: 18px;
+    margin: 0 0.4rem;
+  }
+}
+
+/* Média dotazy pro tablety v landscape orientaci */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .welcome-website {
+    width: 80%;
+    padding-top: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .social-icons-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    justify-content: flex-end; 
+  }
+
+  .social-icon {
+    font-size: 20px;
+    margin: 0 0.5rem;
+  }
+
+  .index-body {
+    min-height: 100vh;
   }
 }

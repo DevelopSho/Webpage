@@ -50,8 +50,6 @@ const Index = () => {
           streamuji. Dozvíte se taktéž o postavách, které jsem v minulosti hrál
           na různých serverech, ale také příběhy těch aktuálních. <br />
           <br /><br />
-          V neposlední bych tímto poděkoval ještě pár lidem, kteří mě podpořili k tomu, abych na webu konečně mákl pořádně a dokončil ho. Jmenovitě pan Imanity, FGTC a PaulKnight, kteří po celou dobu stáli při mě a díky nim jsem se dokázal zase posunout vpřed a znovu chytnout slinu, jak nezakrnět a začít pořádně pracovat. Díky!
-          <br /><br />
           Web je programován v Reactu, pokud narazíte na nějaké chyby, neváhejte
           mě kontaktovat na Discordu. Pro více informací klikni na odkaz <Link className="change-link" to ="/Newsletter">zde!</Link>
         </p>

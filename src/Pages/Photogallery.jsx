@@ -5,9 +5,11 @@ import '../Styles/Logo.css'
 const Photogallery = () => {
     return (
         <>
+       
         <Menu />
         <img src={Ninja} alt="logo" className="logo" loading="lazy" />
         <h1>And This is photogallery</h1>
+     
         </>
     )
 }

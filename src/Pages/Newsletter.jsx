@@ -57,6 +57,7 @@ const Newsletter = () => {
 
   return (
     <>
+    <div className="new-body">
       <Menu />
       <img src={Ninja} alt="logo" className="logo" loading="lazy" />
       <div className="conteiner">
@@ -86,6 +87,7 @@ const Newsletter = () => {
       <footer>
         <p className="footer-style">©Copyright 2024 by JustOnlySho</p>
       </footer>
+      </div>
     </>
   );
 };
