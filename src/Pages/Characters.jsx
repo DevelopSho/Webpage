@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Menu from "../Components/Menu";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Ninja from "../Images/Ninja2.webp";
-import '../Styles/Character.css'; // Nový CSS soubor pro specifické styly
+import '../Styles/Character.css';
 import { collection, getDocs, onSnapshot } from "firebase/firestore";
 import { projectFirestore } from '../Firebase/database';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
@@ -15,18 +16,16 @@ const Characters = () => {
             try {
                 const charactersRef = collection(projectFirestore, "characters");
 
-                // Získání dat z Firestore jednorázově
                 const snapshot = await getDocs(charactersRef);
                 const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
                 setCharacterData(data);
 
-                // Přihlášení k odběru změn v reálném čase
                 const unsubscribe = onSnapshot(charactersRef, (querySnapshot) => {
                     const updatedData = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
                     setCharacterData(updatedData);
                 });
 
-                return unsubscribe; // Zajistí, že se odhlásíme z odběru při unmountu komponenty
+                return unsubscribe;
             } catch (error) {
                 console.error("Chyba při načítání dat z Firebase:", error);
             }
@@ -37,12 +36,9 @@ const Characters = () => {
 
     return (
         <>
-      
             <Menu />
             <img src={Ninja} alt="logo" className="logo" loading="lazy" />
             <div className="characters-page">
-             
-               
                 <Container>
                     <Row className="justify-content-center">
                         {characterData.length > 0 ? (
@@ -52,7 +48,14 @@ const Characters = () => {
                                         {character.image && <Card.Img variant="top" src={character.image} alt={character.name + " " + character.surname} />}
                                         <Card.Body>
                                             <Card.Title>{character.name + " " + character.surname}</Card.Title>
-                                            <Button variant="primary" className="button-characters">Detail postavy</Button>
+                                            <Button 
+                                                as={Link} 
+                                                to={`/character/${character.id}`} 
+                                                variant="primary" 
+                                                className="button-characters"
+                                            >
+                                                Detail postavy
+                                            </Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -63,7 +66,6 @@ const Characters = () => {
                     </Row>
                 </Container>
             </div>
-           
         </>
     );
 }

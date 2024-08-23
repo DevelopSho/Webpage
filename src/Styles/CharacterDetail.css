@@ -1,0 +1,167 @@
+.character-detail-container {
+    width: 60rem; /* Šířka boxu na větších obrazovkách */
+    background-color: #212020; /* Barva pozadí boxu */
+    border: 1px solid #666666; /* Barva okraje boxu */
+    border-radius: 8px; /* Zaoblení rohů */
+    padding: 15px; /* Vnitřní odsazení boxu */
+    margin: 15px auto; /* Vnější odsazení a centrování */
+    overflow-wrap: break-word; /* Zajištění, že dlouhé slova budou lámat řádky */
+    color: #FFFFFF; /* Barva textu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Mírný stín pro hloubku */
+}
+
+/* Styl pro kontejner obrázku */
+.character-image-container {
+    text-align: center; /* Centrovat obrázek */
+    margin-bottom: 20px; /* Mezera pod obrázkem */
+}
+
+/* Styl pro obrázek postavy */
+.character-image {
+    max-width: 50%; /* Přizpůsobit velikost obrázku */
+    height: auto; /* Udržet proporce obrázku */
+    border-radius: 8px; /* Zaoblení rohů obrázku */
+}
+
+/* Styl pro sekci s informacemi o postavě */
+.character-info {
+    padding: 10px; /* Vnitřní odsazení informace */
+}
+
+.detail-heading {
+    color: #FF5733;
+}
+.zmena {
+    color: #FF5733;
+}
+.character-lore {
+    color: #FF5733;
+}
+/* Styl pro obsah informace */
+.character-content {
+    margin-bottom: 20px; /* Mezera mezi jednotlivými sekcemi */
+}
+
+/* Styl pro odstavce v obsahu */
+.character-content p {
+    margin: 10px 0; /* Mezera kolem jednotlivých odstavců */
+}
+
+/* Styl pro nadpis lore */
+.character-lore {
+    font-weight: bold; /* Tučný text pro nadpis lore */
+    margin-top: 20px; /* Mezera nad nadpisem */
+}
+
+/* Styl pro popis postavy */
+.character-description {
+    margin-top: 10px; /* Mezera nad textem popisu */
+    line-height: 1.6; /* Výška řádku pro lepší čitelnost */
+}
+
+/* Responzivní styly pro mobilní zařízení */
+@media (max-width: 767px) {
+    .character-detail-container {
+        position: relative;
+        top: 9rem;
+        width: 90%; /* Šířka boxu na mobilních zařízeních */
+        padding: 10px; /* Menší vnitřní odsazení */
+        margin: 10px auto; /* Menší vnější odsazení */
+    }
+
+    .character-image {
+        max-width: 80%; /* Větší šířka obrázku na mobilních zařízeních */
+    }
+
+    .character-info {
+        padding: 8px; /* Menší vnitřní odsazení */
+    }
+
+    .character-lore {
+        margin-top: 15px; /* Menší mezera nad nadpisem lore */
+    }
+
+    .character-description {
+        margin-top: 8px; /* Menší mezera nad textem popisu */
+    }
+}
+
+/* Responzivní styly pro tablety */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .character-detail-container {
+        width: 80%; /* Šířka boxu na tabletech */
+        padding: 12px; /* Menší vnitřní odsazení než na desktopech */
+        margin: 15px auto; /* Vnější odsazení */
+    }
+
+    .character-image {
+        max-width: 70%; /* Šířka obrázku na tabletech */
+    }
+
+    .character-info {
+        padding: 10px; /* Odsazení podobné desktopu */
+    }
+
+    .character-lore {
+        margin-top: 18px; /* Mezera nad nadpisem lore */
+    }
+
+    .character-description {
+        margin-top: 10px; /* Mezera nad textem popisu */
+    }
+}
+
+/* Responzivní styly pro landscape orientaci na mobilních zařízeních */
+@media (max-width: 767px) and (orientation: landscape) {
+    .character-detail-container {
+        position: relative;
+        top: 10rem;
+        width: 95%; /* Šířka boxu v landscape orientaci na mobilech */
+        padding: 8px; /* Menší vnitřní odsazení */
+        margin: 10px auto; /* Menší vnější odsazení */
+    }
+
+    .character-image {
+        max-width: 85%; /* Větší šířka obrázku v landscape orientaci */
+    }
+
+    .character-info {
+        padding: 6px; /* Menší vnitřní odsazení */
+    }
+
+    .character-lore {
+        margin-top: 12px; /* Menší mezera nad nadpisem lore */
+    }
+
+    .character-description {
+        margin-top: 6px; /* Menší mezera nad textem popisu */
+    }
+}
+
+/* Responzivní styly pro landscape orientaci na tabletech */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .character-detail-container {
+        position: relative;
+        top: 10rem;
+        width: 90%; /* Šířka boxu v landscape orientaci na tabletech */
+        padding: 10px; /* Odsazení přizpůsobené landscape orientaci */
+        margin: 15px auto; /* Vnější odsazení */
+    }
+
+    .character-image {
+        max-width: 75%; /* Šířka obrázku v landscape orientaci na tabletech */
+    }
+
+    .character-info {
+        padding: 8px; /* Odsazení přizpůsobené landscape orientaci */
+    }
+
+    .character-lore {
+        margin-top: 16px; /* Mezera nad nadpisem lore */
+    }
+
+    .character-description {
+        margin-top: 8px; /* Mezera nad textem popisu */
+    }
+}
+
